@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <%- include('./partials/head'); %>
+</head>
+<body>
+    <div class="container">
+        <h1> Simple Todo app </h1>
+        <form action ="/addtask" method="POST">
+            <input type="text" name="newtask" placeholder="add new task" id="taskinput">        <button class="button btn-task"> Add Task </button>
+            <h2> Added Task </h2>
+            <% for( var i = 0; i < task.length; i++){ %>
+                <li><input type="checkbox" name="check" value="<%= task[i] %>" /> <%= task[i] %>  </li>
+                <% } %>
+                <button formaction="/removetask" type="submit" class="button btn-rm"> Remove </button>
+                <button formaction="/edittask" class="button btn-list">Edit Task</button>
+            </form>
+            <h2> Completed task </h2>
+            <% for(var i = 0; i < complete.length; i++){ %>
+                <li><%= complete[i] %> </li>
+                <% } %>
+                
+            </div>
+
+        </body> 
+        </html>
+        
+        

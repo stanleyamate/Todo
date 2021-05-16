@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head'); %>
+</head>
+<body>
+    <div class="container">
+        <h2> edit Todo </h2>
+        
+            <form action ="/addtask" method="POST">
+                <input type="text" name="newtask" placeholder="add new task" id="taskinput" value="<%= editTasked %>">      <button class="button btn-task"> Add Task </button> 
+            </form>
+        
+        </div>
+        
+    </body> 
+    </html>
