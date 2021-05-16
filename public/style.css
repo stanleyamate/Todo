@@ -21,13 +21,14 @@ body {
 }
 
 ul {
-    padding: 20px;
+    padding: 5px;
     width: 100%;
-
+    list-style-type: none;
+    list-style: none;
 }
 ul li{
-  list-style: none;
-  width: 90%;
+    
+    width: 90%;
 }
 .container .button{
     border-style: none;
@@ -35,6 +36,7 @@ ul li{
     background:transparent;
     border-radius: 3px;
     transition: 0.4s;
+    padding: 8px;
 }
 .container.btn-list{
     margin-left: 200px;
@@ -48,7 +50,7 @@ ul li{
     padding: 9px;
     margin-top: 3px;
     border: 1px solid rgb(33, 187, 136);
-
+    
 }
 
 .container h2,h1{

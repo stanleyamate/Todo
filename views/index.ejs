@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <%- include('./partials/head'); %>
+    <%- include('./partials/head'); %>
 </head>
 <body>
     <div class="container">
-        <h1> Simple Todo app </h1>
+        <h1>Todo App </h1>
         <form action ="/addtask" method="POST">
             <input type="text" name="newtask" placeholder="add new task" id="taskinput">        <button class="button btn-task"> Add Task </button>
-            <h2> Added Task </h2>
+            <h2>Tasks </h2>
             <% for( var i = 0; i < task.length; i++){ %>
-                <li><input type="checkbox" name="check" value="<%= task[i] %>" /> <%= task[i] %>  </li>
+                <ul>
+                    <li><input type="checkbox" name="check" value="<%= task[i] %>" /> <%= task[i] %>  </li>
+                </ul>
                 <% } %>
-                <button formaction="/removetask" type="submit" class="button btn-rm"> Remove </button>
-                <button formaction="/edittask" class="button btn-list">Edit Task</button>
+                <button formaction="/removetask" type="submit" class="button btn-rm">Delete</button>
+                <button formaction="/edittask" class="button btn-list">Edit</button>
             </form>
             <h2> Completed task </h2>
             <% for(var i = 0; i < complete.length; i++){ %>
-                <li><%= complete[i] %> </li>
+                <ul>
+                    <li><%= complete[i] %> </li>
+                </ul>
                 <% } %>
                 
             </div>
-
+            
         </body> 
         </html>
         

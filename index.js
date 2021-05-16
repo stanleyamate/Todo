@@ -26,6 +26,7 @@ app.get('/', function(req, res){
         complete:complete
     })
  });
+ //EDIT TASK
 app.get('/edittask', function(req, res){
     res.render('edittask',{
         editTasked:editTasked
@@ -72,9 +73,6 @@ app.post('/edittask', function (req, res) {
         res.redirect("/");
 
     }
-    
-    
-    res.redirect('/edittask')
  });
 
  //FOR COMPLETE
